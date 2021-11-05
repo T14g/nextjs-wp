@@ -1,37 +1,17 @@
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-
-const GlobalStyle = createGlobalStyle`
-html{
-  box-sizing: border-box;
-  background: #F5F4F0;
-  display:block;
-  height: 100%;
-  max-width: 640px;
-  margin:0 auto;
-  padding: 0;
-}
-
-body{
-  background-color:#fafafa;
-  min-height:100vh;
-  padding: 1rem;
-  margin-top:0;
-  font-family:Verdana;
-}
-`;
-
-const theme = {
-  colors: {
-    primary: "#fafafa",
-  },
-};
+import React from "react";
+import Theme from "../themes/default";
+import Layout from '../layouts/default';
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "../layouts/default.styles";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+      <GlobalStyles />
+      <ThemeProvider theme={Theme}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </>
   );
