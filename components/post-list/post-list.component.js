@@ -1,16 +1,18 @@
 import React from "react";
+import PostListStyles from './post-list.styles';
+import PostItem from "../post-item/post-item.component";
 
 const PostList = ({ posts }) => {
-    console.log(posts);
     return (
-        <div>
+        <PostListStyles>
             {posts.length > 0 && posts.map((post, index) => (
-                <div key={index}>
-                    <h3>{post.title.rendered} - <span>Author: {post.author}</span></h3>
-                    <div>{post.content.rendered}</div>
-                </div>
+                <PostItem key={index}
+                    title={post.title.rendered}
+                    author={post._embedded.author[0].name}
+                    content={post.content.rendered}
+                />
             ))}
-        </div>
+        </PostListStyles>
     )
 };
 
