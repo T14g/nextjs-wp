@@ -1,13 +1,14 @@
 import Head from "next/head";
 import PostList from "../components/post-list/post-list.component";
+import { Container } from "../styles/styled-pages/page.styles";
 
 export default function Home({ posts }) {
 
   return (
-    <div>
+    <Container>
       <h1> NextJS Blog with Wordpress CMS</h1>
       <PostList posts={posts} />
-    </div>
+    </Container>
   );
 }
 

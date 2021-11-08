@@ -5,7 +5,10 @@ const PostList = ({ posts }) => {
     return (
         <div>
             {posts.length > 0 && posts.map((post, index) => (
-                <div key={index}>{post.content.rendered}</div>
+                <div key={index}>
+                    <h3>{post.title.rendered} - <span>Author: {post.author}</span></h3>
+                    <div>{post.content.rendered}</div>
+                </div>
             ))}
         </div>
     )
