@@ -1,4 +1,4 @@
-import Head from "next/head";
+import React from "react";
 import PostList from "../components/post-list/post-list.component";
 import { Container, TitleH1 } from "../styles/styled-pages/page.styles";
 
