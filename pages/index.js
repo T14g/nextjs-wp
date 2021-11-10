@@ -1,4 +1,5 @@
 import React from "react";
+import router from "next/router";
 import PostList from "../components/post-list/post-list.component";
 import { Container, TitleH1 } from "../styles/styled-pages/page.styles";
 
@@ -11,6 +12,15 @@ export default function Home({ posts }) {
     </Container>
   );
 }
+
+// export async function getStaticPaths() {
+//   return {
+
+//     paths: {id: 1},
+//     fallback: false
+//   }
+// }
+
 
 export async function getStaticProps() {
   const res = await fetch('http://localhost/t14g/wp-json/wp/v2/posts?_embed');
