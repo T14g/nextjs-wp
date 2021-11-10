@@ -1,39 +1,24 @@
-import React from "react";
-import { useRouter } from 'next/router'
-import { Container, TitleH1 } from "../../styles/styled-pages/page.styles";
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-export default function Post({ data }) {
-
-    console.log(data);
-
+const Post = ({ data }) => {
     return (
-        <Container>
-            <TitleH1>Post Page</TitleH1>
-
-        </Container>
+        <div>
+            <div>{data.title.rendered}</div>
+            <div>{data.content.rendered}</div>
+        </div>
     );
 }
 
+export async function getServerSideProps(ctx) {
+    const res = await fetch('http://localhost/t14g/wp-json/wp/v2/posts/' + ctx.params.pid);
+    const data = await res.json();
+    console.log(data);
+    return {
+        props: {
+            data
+        }
+    }
+}
 
-
-
-// export async function getStaticProps() {
-
-//     const router = useRouter();
-//     const { pid } = router.query;
-//     const res = await fetch('http://localhost/t14g/wp-json/wp/v2/posts/' + pid);
-//     const data = await res.json();
-
-//     return {
-//         props: {
-//             data
-//         }
-//     }
-// }
-
-// export async function getStaticPaths() {
-//     return {
-//         paths: [], //indicates that no page needs be created at build time
-//         fallback: 'blocking' //indicates the type of fallback
-//     }
-// }
+export default Post;

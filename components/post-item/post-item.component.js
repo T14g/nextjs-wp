@@ -1,14 +1,12 @@
 import React from "react";
-import Button from "../button/button.component";
-import PostItemStyles, { Author, Title, Content } from "./post-item.styles";
+import PostItemStyles, { Author, Title, ReadMore } from "./post-item.styles";
 
-const PostItem = ({ title, author, content }) => {
+const PostItem = ({ id, title, author, content }) => {
     return (
         <PostItemStyles>
             <Title>{title}</Title>
             <Author>Author: {author}</Author>
-            <Content>{content}</Content>
-            <Button text="Read More" />
+            <ReadMore href={`post/${id}`}>Read More</ReadMore>
         </PostItemStyles>
     )
 };

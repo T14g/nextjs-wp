@@ -3,10 +3,12 @@ import PostListStyles from './post-list.styles';
 import PostItem from "../post-item/post-item.component";
 
 const PostList = ({ posts }) => {
+    console.log(posts);
     return (
         <PostListStyles>
             {posts.length > 0 && posts.map((post, index) => (
                 <PostItem key={index}
+                    id={post.id}
                     title={post.title.rendered}
                     author={post._embedded.author[0].name}
                     content={post.content.rendered}
