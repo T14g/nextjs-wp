@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Link from 'next/link'
 
 const PostItemStyles = styled.div`
     text-align: center;
@@ -26,11 +25,16 @@ export const Content = styled.div`
     margin-top: 5px;
 `;
 
-export const ReadMore = styled(Link)`
+export const ReadMore = styled.a`
     background: none;
     border: 2px #000 solid;
     padding: 7px 12px;
     font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    max-width: 100px;
+    margin: 10px auto;
 
     &:hover{
         cursor: pointer;
