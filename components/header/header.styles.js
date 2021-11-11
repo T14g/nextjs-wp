@@ -13,11 +13,13 @@ export const Container = styled.div`
     justify-content: space-between;
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.a`
     font-size: 25px;
     font-weight: 900;
     line-height: 54px;
-
+    text-decoration: none;
+    color: #fff;
+    
     &:hover{
         opacity: 0.8;
         cursor: pointer;

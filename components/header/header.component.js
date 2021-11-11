@@ -6,7 +6,7 @@ import HeaderStyles, { Container, Logo } from "./header.styles";
 const Header = () =>
     <HeaderStyles>
         <Container>
-            <Logo>Next-WP</Logo>
+            <Logo href="/">Next-WP</Logo>
             <MenuDesktop />
         </Container>
     </HeaderStyles>

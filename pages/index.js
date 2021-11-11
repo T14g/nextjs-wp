@@ -13,19 +13,10 @@ export default function Home({ posts }) {
   );
 }
 
-// export async function getStaticPaths() {
-//   return {
-
-//     paths: {id: 1},
-//     fallback: false
-//   }
-// }
-
-
 export async function getStaticProps() {
   const res = await fetch('http://localhost/t14g/wp-json/wp/v2/posts?_embed');
   const posts = await res.json();
-  console.log(posts);
+  
   return {
     props: {
       posts

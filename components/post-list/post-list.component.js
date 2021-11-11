@@ -3,7 +3,7 @@ import PostListStyles from './post-list.styles';
 import PostItem from "../post-item/post-item.component";
 
 const PostList = ({ posts }) => {
-    console.log(posts);
+
     return (
         <PostListStyles>
             {posts.length > 0 && posts.map((post, index) => (
