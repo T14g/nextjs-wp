@@ -5,6 +5,10 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
+export const FullRow = styled.div`
+
+`;
+
 export const TitleH1 = styled.h1`
   text-align: center;
 `;

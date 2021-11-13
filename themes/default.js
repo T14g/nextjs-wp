@@ -1,10 +1,10 @@
 const Theme = {
     header: {
-        background: "#000",
-        color: "#fff"
+        background: "#fff",
+        color: "#000"
     },
     colors: {
-        primary: "#fafafa",
+        primary: "#000",
     },
 };
 

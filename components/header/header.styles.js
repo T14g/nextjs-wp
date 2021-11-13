@@ -18,7 +18,7 @@ export const Logo = styled.a`
     font-weight: 900;
     line-height: 54px;
     text-decoration: none;
-    color: #fff;
+    color: #000;
     
     &:hover{
         opacity: 0.8;
