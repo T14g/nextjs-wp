@@ -2,16 +2,24 @@ import React from "react";
 import PostList from "../components/post-list/post-list.component";
 import TypeWritter from "../components/typewritter/typewritter.component";
 import { Container, TitleH1, FullRow } from "../styles/styled-pages/page.styles";
-import HomeStyles, { SectionHero } from "../styles/styled-pages/home.styles";
+import HomeStyles, { SectionHero, SectionMessage, Message } from "../styles/styled-pages/home.styles";
 
 export default function Home({ posts }) {
 
   return (
     <>
       <FullRow>
+
         <SectionHero>
           <TypeWritter />
         </SectionHero>
+
+        <SectionMessage bg="#000">
+          <Message color="#fff">
+            If i'm not coding i'm probably playing  Guitar
+          </Message>
+        </SectionMessage>
+
       </FullRow>
     </>
     // <Container>
