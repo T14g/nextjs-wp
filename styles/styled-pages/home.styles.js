@@ -7,11 +7,24 @@ const HomeStyles = styled.div`
 export const SectionHero = styled.div`
     min-height: 400px;
 
+    @media(max-width: 400px){
+        min-height: 250px;
+    }
+
     .typeWritterStyles {
         margin-top: 200px;
         width: 50%;
         display: flex;
         justify-content: flex-end;
+
+        @media(max-width: 767px){
+            width: 400px;
+        }
+
+        @media(max-width: 400px){
+            display: block;
+            width: 100%;
+        }
         
     }
 `;
@@ -29,6 +42,10 @@ export const Message = styled.div`
     font-weight: 600;
     max-width: 700px;
     margin: 0 auto;
+
+    @media(max-width: 767px){
+        font-size: 25px;
+    }
 `;
 
 export default HomeStyles;
