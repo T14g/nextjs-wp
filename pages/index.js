@@ -1,7 +1,7 @@
 import React from "react";
 import PostList from "../components/post-list/post-list.component";
 import TypeWritter from "../components/typewritter/typewritter.component";
-import { Container, TitleH1, FullRow } from "../styles/styled-pages/page.styles";
+import { Container, TitleH1, FullRow, FlexRow, Column } from "../styles/styled-pages/page.styles";
 import HomeStyles, { SectionHero, SectionMessage, Message } from "../styles/styled-pages/home.styles";
 
 export default function Home({ posts }) {
@@ -21,6 +21,18 @@ export default function Home({ posts }) {
         </SectionMessage>
 
       </FullRow>
+
+      <FlexRow>
+
+        <Column className="col-6">
+           Column 1
+        </Column>
+        
+        <Column className="col-6">
+           Column 1
+        </Column>
+
+      </FlexRow>
     </>
     // <Container>
     //   <TitleH1> NextJS Blog with Wordpress CMS</TitleH1>
