@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
 const HomeStyles = styled.div`
-
+    .col-card-bg{
+        background-image: url('/images/playing-cards.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 700px;
+        width: 50%;
+    }
 `;
 
 export const SectionHero = styled.div`
