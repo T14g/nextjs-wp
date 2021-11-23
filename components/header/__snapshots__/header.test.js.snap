@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Header correctly 1`] = `
+<div
+  className=""
+>
+  <div
+    className=""
+  >
+    <a
+      className=""
+      href="/"
+    >
+      T14g.com
+    </a>
+    <ul
+      className=""
+    >
+      <li
+        className=""
+      >
+        Home
+      </li>
+      <li
+        className=""
+      >
+        Blog
+      </li>
+      <li
+        className=""
+      >
+        About
+      </li>
+    </ul>
+  </div>
+</div>
+`;
