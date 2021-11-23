@@ -1,12 +1,12 @@
 import React from "react";
 import renderer from 'react-test-renderer';
-import Header from "./header.component";
+import Footer from "./footer.component";
 import { MockThemeProvider } from "../mock-theme-provider/mock-theme-provider.component";
 
-it('Render Header correctly', () => {
+it('Render Footer correctly', () => {
     const tree = renderer.create(
         <MockThemeProvider>
-            <Header />
+            <Footer />
         </MockThemeProvider>
     ).toJSON();
 
