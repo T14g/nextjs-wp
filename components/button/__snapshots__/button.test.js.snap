@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Button correctly 1`] = `
+<button
+  className="buttonstyles__ButtonStyles-sc-9oe4d1-0 bwQuNq"
+>
+  Button Text
+</button>
+`;
