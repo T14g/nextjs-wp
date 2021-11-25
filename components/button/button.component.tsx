@@ -1,7 +1,11 @@
 import React from "react";
 import ButtonStyles from "./button.styles";
 
-const Button = ({ text }) => {
+interface ButtonProps {
+    text: String
+};
+
+const Button = ({ text }: ButtonProps) => {
     return (
         <ButtonStyles>{text}</ButtonStyles>
     )

@@ -16,6 +16,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
+    "@types/jest": "^27.0.3",
     "@types/react": "^17.0.37",
     "babel-jest": "^27.3.1",
     "babel-plugin-styled-components": "^1.13.3",
