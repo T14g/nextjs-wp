@@ -4,6 +4,7 @@ import Image from 'next/image';
 import PostList from '../components/post-list/post-list.component';
 import TypeWritter from '../components/typewritter/typewritter.component';
 import CardSuit from '../components/card-suit/card-suit.component';
+import SkillList from '../components/skill-list/skill-list.component';
 
 import {
   Container,
@@ -17,8 +18,8 @@ import {
 
 import HomeStyles, { SectionHero, SectionMessage, Message } from "../styles/styled-pages/home.styles";
 
-export default function Home({ posts }) {
-
+export default function Home({ posts, skills }) {
+  console.log(skills);
   return (
     <HomeStyles>
       <FullRow>
@@ -57,6 +58,20 @@ export default function Home({ posts }) {
         <Column className="col-6 col-card-bg" />
 
       </FlexRow>
+
+      <FullRow>
+
+        <SectionMessage bg="#000">
+          <Message color="#fff">
+            <CardSuit suit="clubs" />
+            Some of my skills
+            <CardSuit suit="diamonds" />
+          </Message>
+        </SectionMessage>
+
+        <SkillList skills={skills} />
+
+      </FullRow>
     </HomeStyles>
     // <Container>
     //   <TitleH1> NextJS Blog with Wordpress CMS</TitleH1>
@@ -69,9 +84,13 @@ export async function getStaticProps() {
   const res = await fetch('http://localhost/t14g/wp-json/wp/v2/posts?_embed');
   const posts = await res.json();
 
+  const res2 = await fetch('http://localhost/t14g/wp-json/wp/v2/skills');
+  const skills = await res2.json();
+
   return {
     props: {
-      posts
+      posts,
+      skills
     }
   }
 }
