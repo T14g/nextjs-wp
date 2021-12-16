@@ -19,7 +19,7 @@ import {
 import HomeStyles, { SectionHero, SectionMessage, Message } from "../styles/styled-pages/home.styles";
 
 export default function Home({ posts, skills }) {
-  console.log(skills);
+
   return (
     <HomeStyles>
       <FullRow>
@@ -84,7 +84,7 @@ export async function getStaticProps() {
   const res = await fetch('http://localhost/t14g/wp-json/wp/v2/posts?_embed');
   const posts = await res.json();
 
-  const res2 = await fetch('http://localhost/t14g/wp-json/wp/v2/skills');
+  const res2 = await fetch('http://localhost/t14g/wp-json/wp/v2/skills?_embed');
   const skills = await res2.json();
 
   return {
