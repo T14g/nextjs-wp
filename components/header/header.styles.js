@@ -4,6 +4,19 @@ const HeaderStyles = styled.div`
     background: ${props => props.theme.header.background};
     color: ${props => props.theme.header.color};
     padding: 10px 15px;
+    width: 100%;
+
+    &.scrolled{
+        position: fixed;
+        top: 0;
+        background: #000;
+        color: #fff;
+        transition: 0.3s;
+
+        a{
+            color: #fff;
+        }
+    }
 `;
 
 export const Container = styled.div`

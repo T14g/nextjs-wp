@@ -72,6 +72,16 @@ export default function Home({ posts, skills }) {
         <SkillList skills={skills} />
 
       </FullRow>
+
+      <FullRow>
+      <SectionMessage bg="#000">
+          <Message color="#fff">
+            <CardSuit suit="spades" />
+            Some of my work
+            <CardSuit suit="hearts" />
+          </Message>
+        </SectionMessage>
+      </FullRow>
     </HomeStyles>
     // <Container>
     //   <TitleH1> NextJS Blog with Wordpress CMS</TitleH1>
