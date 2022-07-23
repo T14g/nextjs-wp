@@ -9,6 +9,7 @@ export const MenuItem = styled.li`
     display: inline;
     font-size: 18px;
     font-weight: 500;
+    padding: 5px;
 
     &:not(:last-child){
         margin-right: 15px;
@@ -17,6 +18,11 @@ export const MenuItem = styled.li`
     &:hover{
         opacity: 0.8;
         cursor: pointer;
+    }
+
+    &.active {
+        color: #000;
+        background: #ECD900;
     }
 `;
 
