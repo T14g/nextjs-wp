@@ -1,5 +1,6 @@
 import 'regenerator-runtime/runtime';
 import React from "react";
+import BannerSlider from '../components/banner-slider/banner-slider.component';
 import Image from 'next/image';
 import PostList from '../components/post-list/post-list.component';
 import TypeWritter from '../components/typewritter/typewritter.component';
@@ -22,7 +23,7 @@ export default function Home({ posts, skills }) {
 
   return (
     <HomeStyles>
-        123
+        <BannerSlider />
     </HomeStyles>
     // <Container>
     //   <TitleH1> NextJS Blog with Wordpress CMS</TitleH1>
