@@ -17,7 +17,14 @@ const BannerSlider = () => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    console.log(current);
+    const interval = setInterval(() => {
+      if(current < slidesMock.length -1) {
+        setCurrent(current + 1);
+      }else{
+        setCurrent(0);
+      }
+    }, 3000);
+    return () => clearInterval(interval);
   }, [current]);
 
   return (
