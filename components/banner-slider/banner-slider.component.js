@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BannerSliderStyles, { SlidesBox } from "./banner-slider.styles";
+import ArrowButton from "../arrow-button/arrow-button.component";
 
 const slidesMock = [
   { id: 1, background: "green" },
@@ -18,9 +19,9 @@ const BannerSlider = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if(current < slidesMock.length -1) {
+      if (current < slidesMock.length - 1) {
         setCurrent(current + 1);
-      }else{
+      } else {
         setCurrent(0);
       }
     }, 3000);
@@ -38,16 +39,22 @@ const BannerSlider = () => {
             ></div>
           ))}
         </SlidesBox>
-      </BannerSliderStyles>
-      <div>
-        {current > 0 && (
-          <button onClick={() => setCurrent(current - 1)}>Previous</button>
-        )}
+        <div className="nav-buttons">
+          {current > 0 && (
+            <ArrowButton
+              onClick={() => setCurrent(current - 1)}
+              direction="left"
+            />
+          )}
 
-        {current < slidesMock.length - 1 && (
-          <button onClick={() => setCurrent(current + 1)}>Next</button>
-        )}
-      </div>
+          {current < slidesMock.length - 1 && (
+            <ArrowButton
+              onClick={() => setCurrent(current + 1)}
+              direction="right"
+            />
+          )}
+        </div>
+      </BannerSliderStyles>
     </>
   );
 };
