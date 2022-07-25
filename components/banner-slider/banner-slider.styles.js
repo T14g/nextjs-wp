@@ -15,12 +15,22 @@ const BannerSliderStyles = styled.div`
     top: 50%;
     width: 100%;
     justify-content: space-between;
+
+    .left-button {
+      position: absolute;
+      left: 10px;
+    }
+
+    .right-button {
+      position: absolute;
+      right: 10px;
+    }
   }
 `;
 
 export const SlidesBox = styled.div`
   position: relative;
-  left: calc(${(props) => (props.current ? - props.current : 0)} * 100vw);
+  left: calc(${(props) => (props.current ? -props.current : 0)} * 100vw);
   width: calc(100vw * 3);
   display: flex;
 `;
