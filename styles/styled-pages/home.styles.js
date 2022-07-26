@@ -10,6 +10,10 @@ const HomeStyles = styled.div`
     }
 `;
 
+export const Section = styled.div`
+
+`;
+
 export const SectionHero = styled.div`
     min-height: 400px;
 
