@@ -7,9 +7,10 @@ const MenuDesktopStyles = styled.ul`
 
 export const MenuItem = styled.li`
     display: inline;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 500;
     padding: 5px;
+    font-family: 'Barlow Condensed', sans-serif;
 
     &:not(:last-child){
         margin-right: 15px;
