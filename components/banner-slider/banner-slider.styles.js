@@ -33,6 +33,7 @@ export const SlidesBox = styled.div`
   left: calc(${(props) => (props.current ? -props.current : 0)} * 100vw);
   width: calc(100vw * 3);
   display: flex;
+  transition: 0.3s;
 `;
 
 export default BannerSliderStyles;

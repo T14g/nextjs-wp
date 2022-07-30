@@ -16,6 +16,14 @@ const HomeStyles = styled.div`
 
 export const Section = styled.div`
   padding: 100px 15px;
+
+  &.section-with-bg1 {
+    background-color: #F9F9F9;
+    background-image: url(./images/bg-section-1.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 `;
 
 export const Row = styled.div`

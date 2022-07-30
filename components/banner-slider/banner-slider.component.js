@@ -3,14 +3,10 @@ import BannerSliderStyles, { SlidesBox } from "./banner-slider.styles";
 import ArrowButton from "../arrow-button/arrow-button.component";
 
 const slidesMock = [
-  { id: 1, background: "green" },
+  { id: 1, background: "banner1" },
   {
     id: 2,
-    background: "red",
-  },
-  {
-    id: 3,
-    background: "blue",
+    background: "banner2",
   },
 ];
 
@@ -22,7 +18,7 @@ const BannerSlider = () => {
       if (current < slidesMock.length - 1) {
         setCurrent(current + 1);
       } else {
-        setCurrent(0);
+        setCurrent(current - 1);
       }
     }, 3000);
     return () => clearInterval(interval);
@@ -33,10 +29,7 @@ const BannerSlider = () => {
       <BannerSliderStyles>
         <SlidesBox current={current}>
           {slidesMock.map((slide) => (
-            <div
-              className="slide"
-              style={{ background: slide.background }}
-            ></div>
+            <img src={`./images/${slide.background}.jpg`} />
           ))}
         </SlidesBox>
         <div className="nav-buttons">
