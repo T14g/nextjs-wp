@@ -11,6 +11,8 @@ import HomeStyles, {
   MediumTitle,
   BigTitle,
   Text,
+  BigText,
+  SpecialText
 } from "../styles/styled-pages/home.styles";
 
 export default function Home() {
@@ -22,7 +24,7 @@ export default function Home() {
           <Row>
             <Column>
               <MediumTitle>About us</MediumTitle>
-              <BigTitle>It's a big title, enjoy it</BigTitle>
+              <BigTitle>Its a big title, enjoy it</BigTitle>
               <Text>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
                 dolorum possimus officia mollitia sapiente dolore assumenda?
@@ -42,24 +44,11 @@ export default function Home() {
       <Section>
         <Container>
           <Row>
-            <Column>
-              <MediumTitle>About us</MediumTitle>
-              <BigTitle>It's a big title, enjoy it</BigTitle>
-              <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-                dolorum possimus officia mollitia sapiente dolore assumenda?
-                Natus, maiores veniam totam eaque unde accusamus cupiditate.
-                Error quia quam eveniet maiores sit!
-              </Text>
-            </Column>
-            <Column>
-              <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-                dolorum possimus officia mollitia sapiente dolore assumenda?
-                Natus, maiores veniam totam eaque unde accusamus cupiditate.
-                Error quia quam eveniet maiores sit!
-              </Text>
-            </Column>
+            <BigText>
+              Lorem <SpecialText>ipsum</SpecialText> dolor sit amet consectetur
+              adipisicing elit. Commodi dolorum possimus officia mollitia
+              sapiente dolore assumenda?
+            </BigText>
           </Row>
         </Container>
       </Section>

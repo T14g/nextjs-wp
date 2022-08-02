@@ -117,4 +117,20 @@ export const Message = styled.div`
   }
 `;
 
+export const BigText = styled.p`
+  margin: 0;
+  color: #000;
+  font-weight: 900;
+  line-height: 1.2;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 40px;
+  margin-top: 20px;
+  text-transform: capitalize;
+  text-align: center;
+`;
+
+export const SpecialText = styled.span`
+  color : #E90C1E;
+`;
+
 export default HomeStyles;
