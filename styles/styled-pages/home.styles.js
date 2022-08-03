@@ -15,9 +15,10 @@ const HomeStyles = styled.div`
 `;
 
 export const Section = styled.div`
-  padding: 100px 15px;
+  padding: 15px;
 
   &.section-with-bg1 {
+    padding: 100px 15px 20px;
     background-color: #F9F9F9;
     background-image: url(./images/bg-section-1.jpg);
     background-position: top left;
