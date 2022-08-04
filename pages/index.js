@@ -2,6 +2,7 @@ import "regenerator-runtime/runtime";
 import React from "react";
 import BannerSlider from "../components/banner-slider/banner-slider.component";
 import YoutubePlayer from "../components/youtube-player/youtube-player.component";
+import Button from "../components/button/button.component";
 
 import HomeStyles, {
   Section,
@@ -12,7 +13,7 @@ import HomeStyles, {
   BigTitle,
   Text,
   BigText,
-  SpecialText
+  SpecialText,
 } from "../styles/styled-pages/home.styles";
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
                 Natus, maiores veniam totam eaque unde accusamus cupiditate.
                 Error quia quam eveniet maiores sit!
               </Text>
+              <Button text="Click me" />
             </Column>
             <Column>
               <YoutubePlayer
